@@ -3,6 +3,8 @@ import './index.css'
 
 import {Chrono} from 'react-chrono'
 
+import {BrowserRouter, Route} from 'react-router-dom'
+
 import CourseTimelineCard from '../CourseTimelineCard'
 import ProjectTimelineCard from '../ProjectTimelineCard'
 
@@ -33,10 +35,17 @@ const TimelineView = props => {
                 )
               }
               return (
-                <ProjectTimelineCard
-                  projectTimelineItem={eachTimeline}
-                  key={eachTimeline.id}
-                />
+                <BrowserRouter>
+                  <Route
+                    path={eachTimeline.projectUrl}
+                    component={
+                      <ProjectTimelineCard
+                        projectTimelineItem={eachTimeline}
+                        key={eachTimeline.id}
+                      />
+                    }
+                  />
+                </BrowserRouter>
               )
             })}
           </Chrono>
