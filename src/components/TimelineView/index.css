@@ -1,0 +1,33 @@
+/* Write your CSS here */
+.background {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-card {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-1 {
+  font-family: 'Roboto';
+  color: #171f46;
+  font-size: 21px;
+}
+
+.heading-2 {
+  font-family: 'Roboto';
+  color: #2b237c;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.chrono-container {
+  width: 100%;
+}
